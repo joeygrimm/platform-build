@@ -1,5 +1,5 @@
 nexus:
-  image: sonatype/nexus:3.3.2-02
+  image: sonatype/nexus3
     - 8081:8081/tcp
   volumes_from:
     - nexus-datavolume

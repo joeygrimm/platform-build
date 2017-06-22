@@ -1,6 +1,6 @@
 .catalog:
   name: Nexus
-  version: 3.3.2-02
+  version: 3
   description: |
     A repository manager.
 nexus:
