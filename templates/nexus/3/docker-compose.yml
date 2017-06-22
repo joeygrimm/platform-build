@@ -1,10 +1,10 @@
 nexus:
-  image: sonatype/nexus3:latest
+  image: sonatype/nexus:3.3.2-02
     - 8081:8081/tcp
   volumes_from:
-    - nexus3-datavolume
+    - nexus-datavolume
   labels:
-    io.rancher.sidekicks: nexus3-datavolume
+    io.rancher.sidekicks: nexus-datavolume
     io.rancher.container.hostname_override: container_name
   environment:
     MAX_HEAP: 768m
