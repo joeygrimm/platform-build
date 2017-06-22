@@ -2,13 +2,13 @@ nexus:
   image: sonatype/nexus3:latest
     - 8081:8081/tcp
   volumes_from:
-    - nexus-datavolume
+    - nexus3-datavolume
   labels:
-    io.rancher.sidekicks: nexus-datavolume
+    io.rancher.sidekicks: nexus3-datavolume
     io.rancher.container.hostname_override: container_name
   environment:
     MAX_HEAP: 768m
-nexus-datavolume:
+nexus3-datavolume:
   image: "busybox"
   command: chown -R 200 /sonatype-work
   volumes:
